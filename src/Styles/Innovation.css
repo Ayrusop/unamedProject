@@ -1,0 +1,65 @@
+.inovation-area{
+    /* background-color: black; */
+    padding: 5%;
+    /* margin: 5%; */
+}
+.inovation-area .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .inovation-area .col-md-4 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .inovation-area .col-md-4 p{
+    font-size: 14px;
+  }
+  .inovation-area .border {
+    border: 1px solid #ddd;
+    border-left: 0;
+    border-top: 0;
+  }
+  
+  .inovation-area .border:first-child {
+    border-left: 1px solid #ddd;
+  }
+  
+  .inovation-area .row:first-child .border {
+    border-top: 1px solid #ddd;
+  }
+  
+  .inovation-area .row .col-md-4:last-child .border {
+    border-right: 1px solid #ddd;
+  }
+  
+  .inovation-area .row:last-child .col-md-4 .border {
+    border-bottom: 1px solid #ddd;
+  }
+  
+
+.inovation-items h3{
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 1%;
+}  
+
+.circle {
+  width: 145px;
+  height: 147px;
+  border-radius: 50%;
+  background-color: #5E5E71;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  border: 2px solid #5E5E71; /* Matches the border style */
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* .circle p {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+} */
