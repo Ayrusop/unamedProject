@@ -1,0 +1,55 @@
+.contact-page-container {
+    background-image: url('../assets/Contact-bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.form-group {
+    padding: 2%;
+}
+.form-check{
+    padding-left: 8%;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Consistent input field styling for all input fields, textareas, and PhoneInput */
+input.form-control, 
+textarea.form-control, 
+.react-tel-input input.form-control {
+    width: 100%;
+    border: 2px solid #1F2042; /* Same border color for all input fields */
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: none;
+}
+
+/* Custom border color on focus for all input fields and PhoneInput */
+input.form-control:focus, 
+textarea.form-control:focus, 
+.react-tel-input input.form-control:focus {
+    border-color: #28a745; /* Change to green when focused */
+    outline: none;
+}
+.btn-submit{
+    background-color:#1F2042 ;
+    color: #ffff;
+}

@@ -6,6 +6,7 @@ import banimg3 from '../assets/imagetitle-img3.png';
 import expoImg from '../assets/explore-img.png'
 import Innovation from './Innovation';
 import CardsSection from './CardsSection';
+import { Link } from 'react-router-dom';
 const Home = () => {
     const [images, setImages] = useState([banimg1, banimg2, banimg3]);
     const [animationClass, setAnimationClass] = useState(['', '', '']);
@@ -78,9 +79,12 @@ const Home = () => {
                                     Lorem ipsum dolor sit amet consectetur. Interdum id elementum arcu nunc nibh. Ut turpis sed consectetur aliquet ornare condimentum. Nisl euismod elit risus purus. Donec nibh amet bibendum bibendum aliquam sed. Feugiat risus vitae volutpat elementum velit massa nam lobortis in. Urna aenean tortor sed morbi non tristique volutpat est sit. Ultricies enim morbi malesuada magna blandit. Dolor aliquam enim cursus imperdiet
                                     Non lectus sollicitudin egestas diam justo. Amet volutpat scelerisque enim proin eu fringilla quam ullamcorper. Tempus a faucibus vel odio augue tristique malesuada.
                                 </p>
+                                <Link to='/contact'>
                                 <button className='glb-btn'>
                                     Explore
                                 </button>
+                                </Link>
+                               
                             </div>
 
                         </div>

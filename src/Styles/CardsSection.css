@@ -5,7 +5,6 @@
     position: relative;
     overflow: hidden;
   }
-  
   /* Hover effect: fill background color slowly from left to right */
   .shadow-box::before {
     content: "";
@@ -41,7 +40,7 @@
   
   /* Style for the card's text */
   .card h1 {
-    font-size: 24px;
+    font-weight: bolder;
     margin-bottom: 1rem;
   }
   
