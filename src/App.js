@@ -1,23 +1,23 @@
-
 import './App.css';
 import Header from './Components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ContactPage from './Components/Contact';
+import Footer from './Components/Footer';
+
 function App() {
   return (
     <Router>
       <div className="App">
-     <Header/>
-     <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/contact' element={<ContactPage/>}/>
-     </Routes>
-    </div>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<ContactPage />} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
-    
   );
 }
 

@@ -1,0 +1,107 @@
+/* CSS for Overlapping Sections */
+.overlapping-sections {
+    position: relative;
+    top: -60px; /* Adjust as needed to overlap with the footer */
+    margin-bottom: -80px;
+  }
+  .section-one {
+    background: #1F2042;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 40px auto;
+    width: 60%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+  .section-one h2{
+    font-size: 25px;
+  }
+.section-two {
+    background: #1F2042;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    /* display: flex; */
+    justify-content: space-between;
+    /* align-items: left; */
+  }
+  
+  .section-one {
+    position: relative;
+    z-index: 2;
+  }
+
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    /* flex: wrap; */
+    flex-wrap: wrap;
+  }
+  
+  .input-container input {
+    padding: 10px;
+    width: 60%;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .input-container button {
+    padding: 10px 20px;
+    background-color: #1F2042;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    /* border-radius: 10px; */
+  }
+  
+  .input-container2 input {
+    padding: 10px;
+    width: 60%;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .input-container2 button {
+    padding: 10px 20px;
+    background-color: #1F2042;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    /* border-radius: 10px; */
+  }
+  .info-text {
+    /* margin-left: 20px; */
+    font-size: 14px;
+    color: #fff;
+  }
+  .input-container1{
+    /* margin-top: 5%; */
+    justify-content: space-between;
+    align-items: center;
+  }
+  .input-container2{
+    /* justify-content: center; */
+    /* flex: wrap; */
+    /* flex-wrap: wrap; */
+    width: 100%;
+  }
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .section-two {
+      /* flex-direction: column;
+      text-align: center; */
+      width: 100%;
+    }
+  
+    .info-text {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  
