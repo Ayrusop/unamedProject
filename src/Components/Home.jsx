@@ -11,32 +11,36 @@ const Home = () => {
     const [images, setImages] = useState([banimg1, banimg2, banimg3]);
     const [animationClass, setAnimationClass] = useState(['', '', '']);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setAnimationClass(['exiting', 'exiting', 'exiting']);
-            setTimeout(() => {
-                setImages((prevImages) => [prevImages[2], prevImages[0], prevImages[1]]);
-                setAnimationClass(['entering', 'entering', 'entering']);
-            }, 500); // Wait for animation to complete
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setAnimationClass(['exiting', 'exiting', 'exiting']);
+    //         setTimeout(() => {
+    //             setImages((prevImages) => [prevImages[2], prevImages[0], prevImages[1]]);
+    //             setAnimationClass(['entering', 'entering', 'entering']);
+    //         }, 500); // Wait for animation to complete
 
-            setTimeout(() => {
-                setAnimationClass(['', '', '']);
-            }, 1000); // Reset classes after transition
-        }, 3000); // Change image every 3 seconds
+    //         setTimeout(() => {
+    //             setAnimationClass(['', '', '']);
+    //         }, 1000); // Reset classes after transition
+    //     }, 3000); // Change image every 3 seconds
 
-        return () => clearInterval(interval);
-    }, []);
+    //     return () => clearInterval(interval);
+    // }, []);
 
     return (
         <section className="banner container-fluid mt-3">
-            <div className="row align-items-center">
+            <div class="container mt-5 align-items-center d-flex main-sec">
                 {/* Left Section */}
-                <div className="col-lg-5 p-3 m-5  main-text-area">
-                    <h1>We will help
+                <div className="col-lg-5 main-text-area">
+                    <h1 className=''>We will help
+                        </h1>
+                    <h1 className=''>
                         you design your
+                        </h1>
+                    <h1 className=''>
                         dream home</h1>
-                    <p>Every dream starts with a passion and every living start with a dream of perfect life. Here, we are helping you to design your perfect home with best deals.</p>
-                    <button className='glb-btn mt-3'>
+                    <p className='mt-3'>Every dream starts with a passion and every living start with a dream of perfect life. Here, we are helping you to design your perfect home with best deals.</p>
+                    <button className='glb-btn mt-5'>
                         Explore
                     </button>
                 </div>

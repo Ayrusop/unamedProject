@@ -1,8 +1,13 @@
-
+.main-sec{
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 .main-text-area h1{
 font-weight: bolder;
 color: #1F2042;
+font-size: 55px;
+
 }
 /* Style for the left section */
 
