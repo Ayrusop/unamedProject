@@ -68,29 +68,23 @@ const Home = () => {
                 </div>
             </div>
             <div class="container mt-5">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="d-flex align-items-center">
-                            <img src={expoImg} alt="expoImg" className='col-lg-7' />
-                            <div className='col-lg-6 explore-txt-area px-5 main-text-area'>
-                                <h1 >Explore & Learn
-                                    more About Us</h1>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur. Interdum id elementum arcu nunc nibh. Ut turpis sed consectetur aliquet ornare condimentum. Nisl euismod elit risus purus. Donec nibh amet bibendum bibendum aliquam sed. Feugiat risus vitae volutpat elementum velit massa nam lobortis in. Urna aenean tortor sed morbi non tristique volutpat est sit. Ultricies enim morbi malesuada magna blandit. Dolor aliquam enim cursus imperdiet
-                                    Non lectus sollicitudin egestas diam justo. Amet volutpat scelerisque enim proin eu fringilla quam ullamcorper. Tempus a faucibus vel odio augue tristique malesuada.
-                                </p>
-                                <Link to='/contact'>
-                                <button className='glb-btn'>
-                                    Explore
-                                </button>
-                                </Link>
-                               
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src={expoImg} alt="expoImg" class="img-fluid" />
+      </div>
+      <div class="col-md-6">
+        <div class="px-3 px-md-5">
+          <h1>Explore & Learn more About Us</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Interdum id elementum arcu nunc nibh. Ut turpis sed consectetur aliquet ornare condimentum. Nisl euismod elit risus purus. Donec nibh amet bibendum bibendum aliquam sed. Feugiat risus vitae volutpat elementum velit massa nam lobortis in. Urna aenean tortor sed morbi non tristique volutpat est sit. Ultricies enim morbi malesuada magna blandit. Dolor aliquam enim cursus imperdiet Non lectus sollicitudin egestas diam justo. Amet volutpat scelerisque enim proin eu fringilla quam ullamcorper. Tempus a faucibus vel odio augue tristique malesuada.
+          </p>
+          <a href="/contact" class="btn glb-btn">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
         <section style={{backgroundColor:'#000'}} className='mt-5'>
         <Innovation/>
         </section>

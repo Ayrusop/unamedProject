@@ -3,6 +3,9 @@
     padding: 5%;
     /* margin: 5%; */
 }
+.inovation-area h1 {
+  color: #ffffff;
+}
 .inovation-area .row {
     margin-left: 0;
     margin-right: 0;
@@ -13,7 +16,8 @@
     padding-right: 0;
   }
   .inovation-area .col-md-4 p{
-    font-size: 14px;
+    font-size: 15px;
+    color: #fff;
   }
   .inovation-area .border {
     border: 1px solid #ddd;
@@ -42,11 +46,13 @@
   font-size: 22px;
   font-weight: bolder;
   padding: 1%;
+  color: #fff;
+
 }  
 
 .circle {
-  width: 145px;
-  height: 147px;
+  width: 168px;
+  height: 168px;
   border-radius: 50%;
   background-color: #5E5E71;
   display: flex;
