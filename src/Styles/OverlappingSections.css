@@ -16,6 +16,10 @@
   }
   .section-one h2{
     font-size: 25px;
+    color: #fff;
+  }
+  .section-two  h3{
+    color: #fff;
   }
 .section-two {
     background: #1F2042;
