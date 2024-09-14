@@ -23,7 +23,7 @@ const Header = () => {
           {isOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
         </button>
         <div
-          className={`collapse navbar-collapse justify-content-end ${isOpen ? 'show' : ''}`}
+          className={`collapse navbar-collapse justify-content-center ${isOpen ? 'show' : ''}`}
         >
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">

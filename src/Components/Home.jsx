@@ -41,7 +41,7 @@ const Home = () => {
                         dream home</h1>
                     <p className='mt-3'>Every dream starts with a passion and every living start with a dream of perfect life. Here, we are helping you to design your perfect home with best deals.</p>
                     <button className='glb-btn mt-5'>
-                        Explore
+                        Learn More
                     </button>
                 </div>
                 {/* Right Section */}
@@ -77,14 +77,17 @@ const Home = () => {
         <img src={expoImg} alt="expoImg" class="img-fluid" />
       </div>
       <div class="col-md-6">
-        <div class="px-3 px-md-5">
+        <div class="px-3 px-md-5 main-text-area">
           <h1>Explore & Learn more About Us</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur. Interdum id elementum arcu nunc nibh. Ut turpis sed consectetur aliquet ornare condimentum. Nisl euismod elit risus purus. Donec nibh amet bibendum bibendum aliquam sed. Feugiat risus vitae volutpat elementum velit massa nam lobortis in. Urna aenean tortor sed morbi non tristique volutpat est sit. Ultricies enim morbi malesuada magna blandit. Dolor aliquam enim cursus imperdiet Non lectus sollicitudin egestas diam justo. Amet volutpat scelerisque enim proin eu fringilla quam ullamcorper. Tempus a faucibus vel odio augue tristique malesuada.
           </p>
-          <a href="/contact" class="btn glb-btn">
-            Explore
-          </a>
+          <Link className='link-tag'>
+          <button className='glb-btn'>
+                        Explore
+            </button>
+          </Link>
+          
         </div>
       </div>
     </div>

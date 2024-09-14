@@ -1,16 +1,19 @@
 footer {
     background: #C8D4E7;
-    background: linear-gradient(59deg, #3A6073, #16222A);
-    color: white;
+    /* background: linear-gradient(59deg, #3A6073, #16222A); */
+    color: rgb(0, 0, 0);
     margin-top: 100px;
 }
 
 footer a {
-    color: #fff;
+    color: #000000;
     font-size: 14px;
     transition: 0.2s;
+    text-decoration: none;
 }
-
+footer h4 {
+    color: #000000;
+}
 footer a:hover {
     color: #1F2042;
     text-decoration: none;
@@ -46,6 +49,7 @@ ul.social-network li {
     border-radius: 50%;
     background-color: #000000;
     line-height: 35px;
+    color: #FFFFFF;
 }
 
 .social-circle li a:hover {

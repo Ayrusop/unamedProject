@@ -1,0 +1,116 @@
+
+
+/* General Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url('mountains.jpg'); */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  min-height: 8vh;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #333; /* Replace with your actual nav background color */
+}
+
+.logo {
+  color: #1b6763; /* Replace with your actual primary color */
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+ul {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  list-style: none;
+}
+
+ul a {
+  color: #1b6763; /* Replace with your actual primary color */
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.burger-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-btn div {
+  width: 25px;
+  height: 2px;
+  background-color: #1b6763; /* Replace with your actual primary color */
+  margin: 5px;
+}
+
+.burger-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 6px);
+}
+
+.burger-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -6px);
+}
+
+
+/* For Widescreens */
+@media (min-width: 1200px) {
+  /* Add widescreen-specific styles here */
+}
+
+/* For Desktops and Laptops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  ul {
+    width: 60%;
+  }
+}
+
+/* For Tablets and Small Laptops */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  ul {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 8vh;
+    height: 92vh;
+    background-color: #333; /* Replace with your nav background color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  ul.show {
+    transform: translateX(0%);
+  }
+
+  .burger-btn {
+    display: block;
+  }
+}
+
+/* For Smartphones */
+@media (max-width: 767px) {
+  /* Add smartphone-specific styles here */
+}

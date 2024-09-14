@@ -1,8 +1,8 @@
 
 
 .mainLogo{
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
 }
 /* General logo styling */
 
@@ -56,4 +56,7 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: baseline;
+}
+.link-tag{
+  text-decoration: none;
 }
