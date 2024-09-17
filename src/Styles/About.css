@@ -1,0 +1,38 @@
+.img-textarea {
+    justify-items: center;
+    /* align-items:start */
+}
+
+.abt-head {
+    font-weight: bolder;
+    color: #1F2042;
+    font-size: 55px;
+    text-align: left;
+}
+.abt-head1{
+    font-weight: bolder;
+    color: #1F2042;
+    font-size: 55px;
+}
+.abt-center-text p{
+    font-size: 24px;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.abt-center-text1 p{
+    font-size: 18px;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.vission-mission{
+    width: 80%;
+}
+.vis-miss-img{
+    width: 150px;
+    height: 150px;
+}

@@ -33,15 +33,19 @@ h2 {
 
 /* Consistent input field styling for all input fields, textareas, and PhoneInput */
 input.form-control, 
-textarea.form-control, 
-.react-tel-input input.form-control {
+textarea.form-control {
     width: 100%;
     border: 2px solid #1F2042; /* Same border color for all input fields */
     border-radius: 4px;
     padding: 10px;
     box-shadow: none;
 }
-
+.react-tel-input input.form-control{
+    width: 100%;
+    border: 2px solid #1F2042; /* Same border color for all input fields */
+    border-radius: 4px;
+    box-shadow: none;
+}
 /* Custom border color on focus for all input fields and PhoneInput */
 input.form-control:focus, 
 textarea.form-control:focus, 
