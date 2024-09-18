@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import passionate from '../assets/about-page/passinoate.png'
 import motive from '../assets/about-page/motive.png'
 import vission from '../assets/about-page/vision.png'
 import mission from '../assets/about-page/mission.png'
 import '../Styles/About.css'
+import Counts from './Counts'
+import ourTeam from '../assets/about-page/ourTeam.png'
+
 const About = () => {
     return (
-        <div className="container">
+        <Fragment>
+            <div className="container">
             <div className="row  img-textarea">
                 <div className='row mt-5'>
                     <div className="col">
@@ -51,7 +55,22 @@ const About = () => {
                    </div>
                 </div>
             </div>
+            <Counts/>
+            
         </div>
+        <div className="row  img-textarea mt-5 our-team">
+                <div className="w-100 mt-5"></div>
+                <div className="col ">
+                    <img src={ourTeam} alt={ourTeam} className='img-fluid' />
+                </div>
+                <div className="col">
+                    <h2 className='abt-head text-center '>Our Team</h2>
+                    <p>At SVRAG Enterprise, our team comprises talented and experienced professionals passionate about design and construction. Each member brings unique expertise in areas such as architecture, interior design, project management, and engineering. We prioritize collaboration and creativity, ensuring that every project reflects our clients' vision and needs. Our commitment to continuous learning and innovation keeps us at the forefront of industry trends. Together, we strive to deliver exceptional results that transform spaces and exceed client expectations..</p>
+                </div>
+            </div>
+        </Fragment>
+        
+
     )
 }
 

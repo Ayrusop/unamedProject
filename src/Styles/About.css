@@ -36,3 +36,15 @@
     width: 150px;
     height: 150px;
 }
+
+.our-team{
+    background-color: #1F2042;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    width: 100%;
+}
+.our-team .col h2{
+    color: #fff;
+}
