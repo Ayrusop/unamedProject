@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../assets/dummy-logo.jpg';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,8 @@ const Header = () => {
               <a className="nav-link" href="#">Support</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Service</a>
+              <Link to='/service'><a className="nav-link" href="#">Service</a> </Link>
+              
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">Contact</a>
