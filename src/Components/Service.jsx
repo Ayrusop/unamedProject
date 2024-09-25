@@ -1,47 +1,38 @@
 import React from 'react'
 import '../Styles/Service.css'
-import centerImg1 from '../assets/Rectangle 45.png'
-import centerImg2 from '../assets/Rectangle 47.png'
-import centerImg3 from '../assets/Rectangle 48.png'
 import designAndPlaning from '../assets/service/Design-planing.png'
 import buildindRenovation from '../assets/service/building-renovation.png'
 import interriorDesign from '../assets/service/interior-design.png'
 import constructionService from '../assets/service/construction service.png'
 import documentation from '../assets/service/documentation.png'
 import professionalSupport from '../assets/service/professional-support.png'
+import ServiceItems from './Services-items'
 const Service = () => {
     return (
         <>
-            <div className="banner-container">
+             <div className="banner-container1">
                 <div className='container contents text-left'>
                     <div className='content-list'>
-                        <p className='we-are'>WE ARE DESIGNERS</p>
-                        <h1 className="banner-heading">WE WILL DESIGN</h1>
-                        <h1 className="banner-heading">YOUR DREAM</h1>
-                        <div className="banner-line" />
-                        <p className="banner-text">
-                            We offer comprehensive design solutions, including space planning, aesthetic styling, and project management for both indoor and outdoor environments.
-                        </p>
-                    </div>
-                    <div className="banner-buttons">
-                        <button className="banner-button">Our Portfolio</button>
-                        <button className="banner-button1">About us</button>
+
+                        <h1 className="banner-heading">WE PROVIDE A WIDE RANGE</h1>
+                        <h1 className="banner-heading"> OF SERVICE</h1>
                     </div>
                 </div>
 
             </div>
             <div className='container'>
+                <ServiceItems/>
                 <div className="row  img-textarea">
                     <div className='row mt-5'>
                         <div className="col">
                             <p className='wel'>WELCOME TO </p>
-                            <h2 className='abt-head'>SVRAG Enterprise</h2>
+                            <h2 className='abt-head'>SVARG Enterprise</h2>
                             <div className="banner-line" />
                         </div>
                         <div className="col abt-svrag">
-                            <p>SVRAG Enterprise specializes in transforming spaces through innovative exterior and interior design solutions. Our team of skilled professionals is dedicated to creating harmonious environments that reflect our clients’ unique styles and functional needs. From residential homes to commercial properties, we offer tailored design services that enhance aesthetics while ensuring practicality and comfort. We pride ourselves on our collaborative approach, working closely with clients to understand their vision and bring it to life.</p>
+                            <p>SVARG Enterprise specializes in transforming spaces through innovative exterior and interior design solutions. Our team of skilled professionals is dedicated to creating harmonious environments that reflect our clients’ unique styles and functional needs. From residential homes to commercial properties, we offer tailored design services that enhance aesthetics while ensuring practicality and comfort. We pride ourselves on our collaborative approach, working closely with clients to understand their vision and bring it to life.</p>
                             <p>
-                                At SVRAG Enterprise, project management is a cornerstone of our service delivery. We oversee every aspect of the design process, from initial concept development to final installation, ensuring timelines and budgets are met.
+                                At SVARG Enterprise, project management is a cornerstone of our service delivery. We oversee every aspect of the design process, from initial concept development to final installation, ensuring timelines and budgets are met.
                             </p>
                             <button className='glb-btn mt-5'>
                                 Read More
@@ -50,12 +41,7 @@ const Service = () => {
                     </div>
                 </div>
             </div>
-            <div className='mt-5 flex ser-img'>
-                <img className='img-fluid' src={centerImg1} alt='' style={{ width: 'fit-content' }} />
-                <img className='img-fluid' src={centerImg2} alt='' style={{ width: 'fit-content' }} />
-                <img className='img-fluid' src={centerImg3} alt='' style={{ width: 'fit-content' }} />
-
-            </div>
+           
 
             <div className='text-center m-5 we-offer'>
                 <h3>WE OFFER</h3>

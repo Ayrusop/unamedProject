@@ -48,3 +48,16 @@
 .our-team .col h2{
     color: #fff;
 }
+.vision-mission{
+align-items: flex-end;  
+}
+.divider{
+    height: 100px;
+    width: 125px;
+    margin-bottom: 2%;
+}
+@media (max-width: 768px) {
+    .divider{
+        display:none;
+    }
+}
