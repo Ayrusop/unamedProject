@@ -2,8 +2,9 @@
     background-image: url('../assets/Contact-bg.png');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 90vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -15,16 +16,14 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     width: 30%;
 }
-
+@media only screen and (max-width: 991px) {
+    .contact-form-container {
+        width: 90%;
+        margin-bottom: 5%;
+    }
+}
 .form-group {
     padding: 2%;
-}
-.form-check{
-    padding-left: 8%;
-}
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .btn-block {
@@ -40,19 +39,8 @@ textarea.form-control {
     padding: 10px;
     box-shadow: none;
 }
-.react-tel-input input.form-control{
-    width: 100%;
-    border: 2px solid #1F2042; /* Same border color for all input fields */
-    border-radius: 4px;
-    box-shadow: none;
-}
-/* Custom border color on focus for all input fields and PhoneInput */
-input.form-control:focus, 
-textarea.form-control:focus, 
-.react-tel-input input.form-control:focus {
-    border-color: #28a745; /* Change to green when focused */
-    outline: none;
-}
+
+
 .btn-submit{
     background: linear-gradient(to bottom right, #1f2042, #4f51a8);
     border: 0;
@@ -78,3 +66,75 @@ textarea.form-control:focus,
 .btn-submit:hover{
     color: #ffff;
 }
+
+
+  /* form */
+  input[ type=text],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 13px;
+  }
+  
+  .form-group {
+    position: relative;
+    /* width: 48%; */
+  }
+  
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 12px 12px 12px 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .form-group textarea {
+    height: 100px;
+  }
+  
+  .phone-input-group {
+    height: 50%;
+  }
+  
+  .phone-input-group input[type="tel"] {
+    height: fit-content;
+    width: 100%;
+  }
+  
+
+
+
+
+  
+
+
+
+  
