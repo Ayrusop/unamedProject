@@ -12,56 +12,36 @@ import centerImg2 from '../assets/center-img2.png'
 import centerImg3 from '../assets/center-img3.png'
 const Home = () => {
     const [images, setImages] = useState([banimg1, banimg2, banimg3]);
-    const [animationClass, setAnimationClass] = useState(['', '', '']);
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setAnimationClass(['exiting', 'exiting', 'exiting']);
-    //         setTimeout(() => {
-    //             setImages((prevImages) => [prevImages[2], prevImages[0], prevImages[1]]);
-    //             setAnimationClass(['entering', 'entering', 'entering']);
-    //         }, 500); // Wait for animation to complete
-
-    //         setTimeout(() => {
-    //             setAnimationClass(['', '', '']);
-    //         }, 1000); // Reset classes after transition
-    //     }, 3000); // Change image every 3 seconds
-
-    //     return () => clearInterval(interval);
-    // }, []);
 
     return (
         <section className="banner container-fluid mt-3">
-            <div class="container mt-5 align-items-center d-flex main-sec">
+            <div className="container mt-5 align-items-center d-flex flex-column flex-lg-row main-sec">
                 {/* Left Section */}
                 <div className="col-lg-5 main-text-area">
-                    <h1 className=''>We will help
-                    </h1>
-                    <h1 className=''>
-                        you design your
-                    </h1>
-                    <h1 className=''>
-                        dream home</h1>
-                    <p className='mt-3'>Every dream starts with a passion and every living start with a dream of perfect life. Here, we are helping you to design your perfect home with best deals.</p>
-                    <button className='glb-btn mt-5'>
-                        Learn More
-                    </button>
+                    <h1 className=''>We will help</h1>
+                    <h1 className=''>you design your</h1>
+                    <h1 className=''>dream home</h1>
+                    <p className='mt-3'>Every dream starts with a passion and every living starts with a dream of perfect life. Here, we are helping you to design your perfect home with best deals.</p>
+                    <button className='glb-btn m-2'>Learn More</button>
                 </div>
+
                 {/* Right Section */}
-                <div className="col-lg-6 d-flex align-items-center">
+                <div className="col-lg-6 d-flex justify-content-center">
                     <div className="row">
                         {/* Image Column 1 */}
-                        <div className="col-6 d-flex flex-column align-items-start">
-                            <img src={images[0]} alt="Image 1" className={`center-image mb-2 ${animationClass[0]}`} />
-                            <img src={images[1]} alt="Image 2" className={`center-image ${animationClass[1]}`} />
+                        <div className="col-12 col-md-6 d-flex flex-column align-items-center">
+                            <img src={images[0]} alt="Image 1" className={`center-image mb-2`} />
+                            <img src={images[1]} alt="Image 2" className={`center-image`} />
                         </div>
                         {/* Image Column 2 */}
-                        <div className="col-6 d-flex justify-content-center align-items-center">
-                            <img src={images[2]} alt="Image 3" className={`center-image ban-img center-image ${animationClass[2]}`} />
+                        <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                            <img src={images[2]} alt="Image 3" className={`center-image ban-img  m-2`} />
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-md-12">

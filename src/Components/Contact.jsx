@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-phone-input-2/lib/style.css'; 
+import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
 import emailjs from 'emailjs-com'; // Import EmailJS
-import '../Styles/ContactPage.css'; 
+import '../Styles/ContactPage.css';
+import { Link } from "react-router-dom";
+
 
 const ContactPage = () => {
     const [phone, setPhone] = useState('');
@@ -12,6 +14,7 @@ const ContactPage = () => {
         lastName: '',
         email: '',
         message: '',
+        phone: '',
         termsAccepted: false
     });
     const [errors, setErrors] = useState({});
@@ -23,7 +26,7 @@ const ContactPage = () => {
         if (!formData.email) validationErrors.email = 'Email is required';
         if (!formData.message) validationErrors.message = 'Message is required';
         if (!formData.termsAccepted) validationErrors.termsAccepted = 'You must accept the terms';
-        if (!phone) validationErrors.phone = 'Phone number is required';
+        if (!phone && !formData.phone) validationErrors.phone = 'Phone number is required';
         return validationErrors;
     };
 
@@ -51,100 +54,122 @@ const ContactPage = () => {
             setErrors(validationErrors);
         }
     };
+    const handlePhoneChange = (phone) => {
+        setFormData({ ...formData, phone });
+    };
+    const handleCheckboxChange = (e) => {
+        setFormData({ ...formData, privacy: e.target.checked });
+    };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+
+
+        emailjs
+            .sendForm('service_lyfqebm', 'template_izyyodh', e.target, '7LZ7Pyk8u84wlH4qs')
+            .then(
+                () => {
+
+
+                },
+                () => {
+                    console.log('Failed to submit the form. Please try again.');
+                }
+            );
+    };
     return (
-        <div className="contact-page-container">
-            <div className="contact-form-container">
-                <h2>Contact Us</h2>
-                <p className='text-center'>You can reach us at anytime</p>
-                <form onSubmit={sendEmail}>
-                    <div className="form-row d-flex">
-                        <div className="form-group col-md-6">
-                            <input 
-                                type="text" 
-                                className={`form-control ${errors.firstName ? 'is-invalid' : ''}`} 
-                                id="firstName" 
-                                name="firstName" 
-                                placeholder="First Name"
-                                value={formData.firstName}
-                                onChange={handleChange}
-                            />
-                            {errors.firstName && <div className="invalid-feedback">{errors.firstName}</div>}
-                        </div>
-                        <div className="form-group col-md-6">
-                            <input 
-                                type="text" 
-                                className={`form-control ${errors.lastName ? 'is-invalid' : ''}`} 
-                                id="lastName" 
-                                name="lastName" 
-                                placeholder="Last Name"
-                                value={formData.lastName}
-                                onChange={handleChange}
-                            />
-                            {errors.lastName && <div className="invalid-feedback">{errors.lastName}</div>}
-                        </div>
-                    </div>
+        <div className='contact-page-container'>
+            <form className="contact-form col-lg-6 contact-form-container" onSubmit={sendEmail}>
+            <div className='text-center'>
+                <h1 className='' style={{ fontSize: '3rem' }}>Get In Touch</h1>
+                <span className='' style={{ fontSize: '1rem' }}>
+                You can reach us at anytime
+                </span>
+            </div>
+            <div className="form-row row mt-3">
+                <div className="form-group col-lg-6">
 
-                    <div className="form-group">
-                        <input 
-                            type="email" 
-                            className={`form-control ${errors.email ? 'is-invalid' : ''}`} 
-                            id="email" 
-                            name="email" 
-                            placeholder="Email" 
-                            value={formData.email}
-                            onChange={handleChange}
-                        />
-                        {errors.email && <div className="invalid-feedback">{errors.email}</div>}
-                    </div>
+                    <input
+                        type="text"
+                        name="firstName"
+                        placeholder="First Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group col-lg-6">
 
-                    <div className="form-group col-md-12">
-                        <PhoneInput
-                            country={'in'}
-                            value={phone}
-                            onChange={phone => setPhone(phone)}
-                            inputClass={`form-control ${errors.phone ? 'is-invalid' : ''}`}
-                            inputProps={{
-                                name: 'mobile',
-                                required: true,
-                                autoFocus: true
-                            }}
-                        />
-                        {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
-                    </div>
+                    <input
+                        type="text"
+                        name="lastName"
+                        placeholder="Last Name"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+            </div>
+            <div className="form-row row">
+                <div className="form-group col-lg-12">
 
-                    <div className="form-group">
-                        <textarea 
-                            className={`form-control ${errors.message ? 'is-invalid' : ''}`} 
-                            id="message" 
-                            name="message" 
-                            rows="4" 
-                            placeholder="Your message"
-                            value={formData.message}
-                            onChange={handleChange}
-                        ></textarea>
-                        {errors.message && <div className="invalid-feedback">{errors.message}</div>}
-                    </div>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
 
-                    <div className="form-group d-flex">
-                        <input 
-                            type="checkbox" 
-                            className={`form-check-input ${errors.termsAccepted ? 'is-invalid' : ''}`} 
-                            id="terms" 
-                            name="termsAccepted"
-                            checked={formData.termsAccepted}
-                            onChange={handleChange}
-                        />
-                        <label className="form-check-label" htmlFor="terms">
-                            By contacting us, you agree to our <a href="#terms">Terms of Service</a> & <a href="#privacy">Privacy Policy</a>
+            </div>
+            <div className="form-row row">
+                <div className="form-group col-lg-12 phone-input-group">
+                    <PhoneInput
+                        country={'in'}
+                        value={formData.phone}
+                        onChange={handlePhoneChange}
+                        inputProps={{
+                            name: 'phone',
+                            required: true,
+                            placeholder: 'Phone Number',
+                        }}
+                    />
+                </div>
+            </div>
+           
+            <div className="form-row row">
+                <div className="form-group col-lg-12">
+
+                    <textarea
+                        name="message"
+                        placeholder="Message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        style={{ resize: "none" }}
+                    ></textarea>
+                </div>
+            </div>
+            
+            <div className="form-row row full-width">
+            <label className="form-check-label text-center" htmlFor="terms">
+                            By contacting us, you agree to our <b >Terms of Service</b> & <b >Privacy Policy</b>
                         </label>
                         {errors.termsAccepted && <div className="invalid-feedback d-block">{errors.termsAccepted}</div>}
-                    </div>
-
-                    <button type="submit" className="btn btn-submit btn-block mt-2">Submit</button>
-                </form>
+ 
             </div>
+
+            <button type="submit" className="btn btn-submit btn-block mt-2">Submit</button>
+
+
+
+
+        </form>
         </div>
+        
     );
 };
 

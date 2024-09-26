@@ -7,10 +7,12 @@ import ContactPage from './Components/Contact';
 import Footer from './Components/Footer';
 import About from './Components/About';
 import Service from './Components/Service';
+import ScrollToTop from './Components/ScroolToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <div className="App">
         <Header />
         <Routes>

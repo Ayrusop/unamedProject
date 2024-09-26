@@ -28,17 +28,17 @@ const Header = () => {
         >
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#">Home</a>
+            <Link to='/' style={{textDecoration:'none'}}><a className="nav-link">Home</a> </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Support</a>
+            <Link to='/aboutus' style={{textDecoration:'none'}}><a className="nav-link">About Us</a> </Link>
             </li>
             <li className="nav-item">
-              <Link to='/service'><a className="nav-link" href="#">Service</a> </Link>
+              <Link to='/service' style={{textDecoration:'none'}}><a className="nav-link">Service</a> </Link>
               
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contact</a>
+            <Link to='/contact' style={{textDecoration:'none'}}><a className="nav-link">Contact</a> </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">Get Quote</a>
