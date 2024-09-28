@@ -7,11 +7,16 @@ import constructionService from '../assets/service/construction service.png'
 import documentation from '../assets/service/documentation.png'
 import professionalSupport from '../assets/service/professional-support.png'
 import ServiceItems from './Services-items'
+import image from '../assets/service/icon-5359553_640.webp'
+import plan from '../assets/service/plan.png'
+import design from '../assets/service/design.png'
+import buillding from '../assets/service/building.png'
+import finish from '../assets/service/finish.png'
 import MetaData from '../MetaData'
 const Service = () => {
     return (
         <Fragment>
-            <MetaData title={'Service | SVARG'}/>
+            <MetaData title={'Service | SVARG'} />
             <div className="banner-container1">
                 <div className='container contents text-left'>
                     <div className='content-list'>
@@ -112,6 +117,73 @@ const Service = () => {
                     </div>
                 </div>
             </div>
+            <div class="row p-5 mt-5">
+                <div class="col">
+                    <img src={plan} alt="plan" />
+                    <div className='p-3'>
+                        <h3 className=''>PLANNING</h3>
+                    <p className=''>Developing a strategic approach to project goals, timelines, and resource allocation to ensure a successful design and construction process.</p>
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    <img src={design} alt="design" />
+                    <div className='p-3'>
+                        <h3 className=''>DESIGNING</h3>
+                    <p className=''>Translating concepts into visual representations, focusing on aesthetics, functionality, and user experience to create cohesive spaces.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src={buillding} alt="plan" />
+                    <div className='p-3'>
+                        <h3 className=''>BUILDING</h3>
+                    <p className=''>Executing the construction process, where designs are realized through the assembly of materials and coordination of labor to create physical structures.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src={finish} alt="plan" />
+                    <div className='p-3'>
+                        <h3 className=''>FINISH</h3>
+                    <p className=''>Adding final touches and details that enhance a space, including paint, fixtures, and furnishings, to ensure the completed project meets both aesthetic and functional standards.</p>
+                    </div>
+                </div>
+            </div>
+            <section className='mt-5 testimonal-section p-3'>
+                <div className='text-center'>
+                    <h3 className='mt-5'>TESTIMONIALS</h3>
+                    <h2>WHAT THEY SAY ABOUT US</h2>
+                    <center>
+                        <div className="banner-line1 text-center mt-2" />
+                    </center>
+                </div>
+
+
+                <div class="row ">
+                    <div class="col-sm">
+                        <div className="testimonial-container mb-5">
+                            <p className="testimonial-text">“From concept to completion, SVARG Enterprise exceeded our expectations. Their expertise in both interior and exterior design is unmatched, and they truly listen to their clients' needs.”</p>
+                            <img className="testimonial-image" src={image} alt="Testimonial" />
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div className="testimonial-container mb-5">
+                            <p className="testimonial-text">“Working with SVARG Enterprise was a fantastic experience. Their team is professional, attentive, and incredibly skilled. They turned our outdated office into a modern, functional workspace that we are proud of.”</p>
+                            <img className="testimonial-image" src={image} alt="Testimonial" />
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div className="testimonial-container mb-5">
+                            <p className="testimonial-text">“SVARG Enterprise transformed our home beyond our expectations. Their attention to detail and creative vision truly brought our ideas to life. We couldn’t be happier with the results!”</p>
+                            <img className="testimonial-image" src={image} alt="Testimonial" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                </div>
+            </section>
+            
         </Fragment>
 
 
