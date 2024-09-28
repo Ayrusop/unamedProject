@@ -1,4 +1,5 @@
 import './App.css';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './Components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -12,16 +13,18 @@ import ScrollToTop from './Components/ScroolToTop';
 function App() {
   return (
     <Router>
-      <ScrollToTop/>
+      <ScrollToTop />
       <div className="App">
-        <Header />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/contact' element={<ContactPage />} />
-          <Route path='/aboutus' element={<About />} />
-          <Route path='/service' element={<Service />} />
-        </Routes>
-        <Footer />
+        <HelmetProvider>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='/aboutus' element={<About />} />
+            <Route path='/service' element={<Service />} />
+          </Routes>
+          <Footer />
+        </HelmetProvider>
       </div>
     </Router>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import '../Styles/Home.css';
 import banimg1 from '../assets/imagetitle-img1.png';
 import banimg2 from '../assets/imagetitle-img2.png';
@@ -10,18 +10,19 @@ import { Link } from 'react-router-dom';
 import centerImg1 from '../assets/center-img.png'
 import centerImg2 from '../assets/center-img2.png'
 import centerImg3 from '../assets/center-img3.png'
+import MetaData from '../MetaData';
 const Home = () => {
     const [images, setImages] = useState([banimg1, banimg2, banimg3]);
 
 
     return (
-        <section className="banner container-fluid mt-3">
+        <Fragment>
+            <MetaData title={"Discover | SVARG"} />
+            <section className="banner container-fluid mt-3">
             <div className="container mt-5 align-items-center d-flex flex-column flex-lg-row main-sec">
                 {/* Left Section */}
                 <div className="col-lg-5 main-text-area">
-                    <h1 className=''>We will help</h1>
-                    <h1 className=''>you design your</h1>
-                    <h1 className=''>dream home</h1>
+                    <h1 className=''>We will help <br />you design your <br /> dream home</h1>
                     <p className='mt-3'>Every dream starts with a passion and every living starts with a dream of perfect life. Here, we are helping you to design your perfect home with best deals.</p>
                     <button className='glb-btn m-2'>Learn More</button>
                 </div>
@@ -61,7 +62,7 @@ const Home = () => {
                     </div>
                     <div class="col-md-6">
                         <div class="px-3 px-md-5 main-text-area">
-                            <h1>Explore & Learn more About Us</h1>
+                            <h2>Explore & Learn more About Us</h2>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur. Interdum id elementum arcu nunc nibh. Ut turpis sed consectetur aliquet ornare condimentum. Nisl euismod elit risus purus. Donec nibh amet bibendum bibendum aliquam sed. Feugiat risus vitae volutpat elementum velit massa nam lobortis in. Urna aenean tortor sed morbi non tristique volutpat est sit. Ultricies enim morbi malesuada magna blandit. Dolor aliquam enim cursus imperdiet Non lectus sollicitudin egestas diam justo. Amet volutpat scelerisque enim proin eu fringilla quam ullamcorper. Tempus a faucibus vel odio augue tristique malesuada.
                             </p>
@@ -99,6 +100,8 @@ const Home = () => {
             </section>
 
         </section>
+        </Fragment>
+        
     )
 }
 

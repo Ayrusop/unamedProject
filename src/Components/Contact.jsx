@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
 import emailjs from 'emailjs-com'; // Import EmailJS
 import '../Styles/ContactPage.css';
 import { Link } from "react-router-dom";
+import MetaData from '../MetaData';
 
 
 const ContactPage = () => {
@@ -79,97 +80,101 @@ const ContactPage = () => {
             );
     };
     return (
-        <div className='contact-page-container'>
-            <form className="contact-form col-lg-6 contact-form-container" onSubmit={sendEmail}>
-            <div className='text-center'>
-                <h1 className='' style={{ fontSize: '3rem' }}>Get In Touch</h1>
-                <span className='' style={{ fontSize: '1rem' }}>
-                You can reach us at anytime
-                </span>
-            </div>
-            <div className="form-row row mt-3">
-                <div className="form-group col-lg-6">
+        <Fragment>
+             <MetaData title={"Contact | SVARG"} />
+            <div className='contact-page-container'>
+                <form className="contact-form col-lg-6 contact-form-container" onSubmit={sendEmail}>
+                    <div className='text-center'>
+                        <h1 className='' style={{ fontSize: '3rem' }}>Get In Touch</h1>
+                        <span className='' style={{ fontSize: '1rem' }}>
+                            You can reach us at anytime
+                        </span>
+                    </div>
+                    <div className="form-row row mt-3">
+                        <div className="form-group col-lg-6">
 
-                    <input
-                        type="text"
-                        name="firstName"
-                        placeholder="First Name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div className="form-group col-lg-6">
+                            <input
+                                type="text"
+                                name="firstName"
+                                placeholder="First Name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div className="form-group col-lg-6">
 
-                    <input
-                        type="text"
-                        name="lastName"
-                        placeholder="Last Name"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-            </div>
-            <div className="form-row row">
-                <div className="form-group col-lg-12">
+                            <input
+                                type="text"
+                                name="lastName"
+                                placeholder="Last Name"
+                                value={formData.lastName}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                    </div>
+                    <div className="form-row row">
+                        <div className="form-group col-lg-12">
 
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-            </div>
-            <div className="form-row row">
-                <div className="form-group col-lg-12 phone-input-group">
-                    <PhoneInput
-                        country={'in'}
-                        value={formData.phone}
-                        onChange={handlePhoneChange}
-                        inputProps={{
-                            name: 'phone',
-                            required: true,
-                            placeholder: 'Phone Number',
-                        }}
-                    />
-                </div>
-            </div>
-           
-            <div className="form-row row">
-                <div className="form-group col-lg-12">
+                    </div>
+                    <div className="form-row row">
+                        <div className="form-group col-lg-12 phone-input-group">
+                            <PhoneInput
+                                country={'in'}
+                                value={formData.phone}
+                                onChange={handlePhoneChange}
+                                inputProps={{
+                                    name: 'phone',
+                                    required: true,
+                                    placeholder: 'Phone Number',
+                                }}
+                            />
+                        </div>
+                    </div>
 
-                    <textarea
-                        name="message"
-                        placeholder="Message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        style={{ resize: "none" }}
-                    ></textarea>
-                </div>
-            </div>
-            
-            <div className="form-row row full-width">
-            <label className="form-check-label text-center" htmlFor="terms">
+                    <div className="form-row row">
+                        <div className="form-group col-lg-12">
+
+                            <textarea
+                                name="message"
+                                placeholder="Message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                                style={{ resize: "none" }}
+                            ></textarea>
+                        </div>
+                    </div>
+
+                    <div className="form-row row full-width">
+                        <label className="form-check-label text-center" htmlFor="terms">
                             By contacting us, you agree to our <b >Terms of Service</b> & <b >Privacy Policy</b>
                         </label>
                         {errors.termsAccepted && <div className="invalid-feedback d-block">{errors.termsAccepted}</div>}
- 
+
+                    </div>
+
+                    <button type="submit" className="btn btn-submit btn-block mt-2">Submit</button>
+
+
+
+
+                </form>
             </div>
-
-            <button type="submit" className="btn btn-submit btn-block mt-2">Submit</button>
-
+        </Fragment>
 
 
-
-        </form>
-        </div>
-        
     );
 };
 

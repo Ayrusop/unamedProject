@@ -28,7 +28,7 @@
   .shadow-box:hover .card-body p{
     color: #fff;
   }
-  .shadow-box:hover .card-body h1{
+  .shadow-box:hover .card-body h2{
     color: #fff;
   }
   
@@ -39,7 +39,7 @@
   }
   
   /* Style for the card's text */
-  .card h1 {
+  .card h2 {
     font-weight: bolder;
     margin-bottom: 1rem;
   }

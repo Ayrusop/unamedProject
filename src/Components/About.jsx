@@ -7,15 +7,16 @@ import '../Styles/About.css'
 import Counts from './Counts'
 import ourTeam from '../assets/about-page/ourTeam.png'
 import divider from '../assets/about-page/divider.png'
+import MetaData from '../MetaData'
 const About = () => {
     return (
         <Fragment>
+             <MetaData title={"About | SVARG"} />
             <div className="banner-container">
                 <div className='container contents text-left'>
                     <div className='content-list'>
                         <p className='we-are'>WE ARE DESIGNERS</p>
-                        <h1 className="banner-heading">WE WILL DESIGN</h1>
-                        <h1 className="banner-heading">YOUR DREAM</h1>
+                        <h1 className="banner-heading">WE WILL DESIGN <br/>YOUR DREAM</h1>
                         <div className="banner-line" />
                         <p className="banner-text">
                             We offer comprehensive design solutions, including space planning, aesthetic styling, and project management for both indoor and outdoor environments.
