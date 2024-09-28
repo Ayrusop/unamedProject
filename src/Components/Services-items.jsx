@@ -10,13 +10,13 @@ function ServiceItems() {
     ? products.filter((product) => product.category === selectedCategory)
     : products;
 
-  const getHeaderText = () => {
-    if (selectedCategory) {
-      const category = categories.find((cat) => cat.id === selectedCategory);
-      return `${category.name}`;
-    }
-    return 'All Products';
-  };
+  // const getHeaderText = () => {
+  //   if (selectedCategory) {
+  //     const category = categories.find((cat) => cat.id === selectedCategory);
+  //     return `${category.name}`;
+  //   }
+  //   return 'All Products';
+  // };
 
   return (
     <div className='container'>

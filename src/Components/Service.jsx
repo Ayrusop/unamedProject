@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import '../Styles/Service.css'
 import designAndPlaning from '../assets/service/Design-planing.png'
 import buildindRenovation from '../assets/service/building-renovation.png'
@@ -7,21 +7,22 @@ import constructionService from '../assets/service/construction service.png'
 import documentation from '../assets/service/documentation.png'
 import professionalSupport from '../assets/service/professional-support.png'
 import ServiceItems from './Services-items'
+import MetaData from '../MetaData'
 const Service = () => {
     return (
-        <>
-             <div className="banner-container1">
+        <Fragment>
+            <MetaData title={'Service | SVARG'}/>
+            <div className="banner-container1">
                 <div className='container contents text-left'>
                     <div className='content-list'>
 
-                        <h1 className="banner-heading">WE PROVIDE A WIDE RANGE</h1>
-                        <h1 className="banner-heading"> OF SERVICE</h1>
+                        <h1 className="banner-heading">WE PROVIDE A WIDE RANGE <br />OF SERVICE</h1>
                     </div>
                 </div>
 
             </div>
             <div className='container'>
-                <ServiceItems/>
+                <ServiceItems />
                 <div className="row  img-textarea">
                     <div className='row mt-5'>
                         <div className="col">
@@ -41,7 +42,7 @@ const Service = () => {
                     </div>
                 </div>
             </div>
-           
+
 
             <div className='text-center m-5 we-offer'>
                 <h3>WE OFFER</h3>
@@ -111,8 +112,7 @@ const Service = () => {
                     </div>
                 </div>
             </div>
-
-        </>
+        </Fragment>
 
 
     )
