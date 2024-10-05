@@ -122,29 +122,29 @@ const Service = () => {
                     <img src={plan} alt="plan" />
                     <div className='p-3'>
                         <h3 className=''>PLANNING</h3>
-                    <p className=''>Developing a strategic approach to project goals, timelines, and resource allocation to ensure a successful design and construction process.</p>
+                        <p className=''>Developing a strategic approach to project goals, timelines, and resource allocation to ensure a successful design and construction process.</p>
                     </div>
-                    
+
                 </div>
                 <div class="col">
                     <img src={design} alt="design" />
                     <div className='p-3'>
                         <h3 className=''>DESIGNING</h3>
-                    <p className=''>Translating concepts into visual representations, focusing on aesthetics, functionality, and user experience to create cohesive spaces.</p>
+                        <p className=''>Translating concepts into visual representations, focusing on aesthetics, functionality, and user experience to create cohesive spaces.</p>
                     </div>
                 </div>
                 <div class="col">
                     <img src={buillding} alt="plan" />
                     <div className='p-3'>
                         <h3 className=''>BUILDING</h3>
-                    <p className=''>Executing the construction process, where designs are realized through the assembly of materials and coordination of labor to create physical structures.</p>
+                        <p className=''>Executing the construction process, where designs are realized through the assembly of materials and coordination of labor to create physical structures.</p>
                     </div>
                 </div>
                 <div class="col">
                     <img src={finish} alt="plan" />
                     <div className='p-3'>
                         <h3 className=''>FINISH</h3>
-                    <p className=''>Adding final touches and details that enhance a space, including paint, fixtures, and furnishings, to ensure the completed project meets both aesthetic and functional standards.</p>
+                        <p className=''>Adding final touches and details that enhance a space, including paint, fixtures, and furnishings, to ensure the completed project meets both aesthetic and functional standards.</p>
                     </div>
                 </div>
             </div>
@@ -183,7 +183,7 @@ const Service = () => {
                 <div>
                 </div>
             </section>
-            
+
         </Fragment>
 
 

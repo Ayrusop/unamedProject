@@ -6,6 +6,7 @@ import projectManagement from '../assets/innovation/project-management.png'
 import consultantPlaning from '../assets/innovation/consoltant-planing.png'
 import residential from '../assets/innovation/residential.png'
 import interior from '../assets/innovation/interior.png'
+import { Link } from 'react-router-dom';
 const Innovation = () => {
   return (
     <div className="container inovation-area">
@@ -64,7 +65,7 @@ const Innovation = () => {
         </div>
         <div className="col-md-4">
         <div className="border p-4 text-center d-flex justify-content-center align-items-center">
-            <p className='circle text-center'>View All Services ↗️</p>
+           <Link to='/service' style={{textDecoration:'none'}}> <p className='circle text-center'>View All Services ↗</p></Link>
           </div>
         </div>
       </div>

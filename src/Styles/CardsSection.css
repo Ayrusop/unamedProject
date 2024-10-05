@@ -1,52 +1,51 @@
 /* Card shadow */
 .shadow-box {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.5s ease, box-shadow 0.5s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  /* Hover effect: fill background color slowly from left to right */
-  .shadow-box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background-color: #1F2042; /* Fill color */
-    z-index: 0;
-    transition: width 0.6s ease; /* Control the speed of fill */
-  }
-  
-  .shadow-box:hover::before {
-    width: 100%; /* Expands the background color fill on hover */
-  }
-  
-  .shadow-box:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  .shadow-box:hover .card-body p{
-    color: #fff;
-  }
-  .shadow-box:hover .card-body h2{
-    color: #fff;
-  }
-  
-  /* Ensure the card content is above the background fill */
-  .card-body {
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* Style for the card's text */
-  .card h2 {
-    font-weight: bolder;
-    margin-bottom: 1rem;
-  }
-  
-  .card p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #000;
-  }
-  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+/* Hover effect: fill background color slowly from left to right */
+.shadow-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #1F2042; /* Fill color */
+  z-index: 0;
+  transition: width 0.6s ease; /* Control the speed of fill */
+}
+
+.shadow-box:hover::before {
+  width: 100%; /* Expands the background color fill on hover */
+}
+
+.shadow-box:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.shadow-box:hover .card-body span{
+  color: #fff;
+}
+.shadow-box:hover .card-body h2{
+  color: #fff;
+}
+
+/* Ensure the card content is above the background fill */
+.card-body {
+  position: relative;
+  z-index: 1;
+}
+
+/* Style for the card's text */
+.card h2 {
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  /* font-size: 16px; */
+  line-height: 1.5;
+  color: #000;
+}

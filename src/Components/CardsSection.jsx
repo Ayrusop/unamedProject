@@ -11,9 +11,9 @@ const CardsSection = () => {
           <div className="card shadow-box">
             <div className="card-body p-5">
               <h2>What we do?</h2>
-              <p>
+              <span>
               We specialize in both interior and exterior design, offering tailored solutions to create your ideal living space. Our team transforms your vision into reality with personalized design and customization. From concept to completion, we ensure your home reflects your unique style and needs.
-              </p>
+              </span>
             </div>
           </div>
         </div>
@@ -22,9 +22,9 @@ const CardsSection = () => {
           <div className="card shadow-box">
             <div className="card-body p-5">
               <h2>How we do?</h2>
-              <p>
+              <span>
               We start with a detailed consultation to understand your vision and requirements. Our team then crafts custom designs and oversees every step of the implementation. Finally, we deliver a finished space that perfectly reflects your style and functional needs.
-              </p>
+              </span>
             </div>
           </div>
         </div>
@@ -36,9 +36,9 @@ const CardsSection = () => {
           <div className="card shadow-box">
             <div className="card-body p-5">
               <h2>Why we do ?</h2>
-              <p>
+              <span>
               We’re passionate about creating spaces that enhance your lifestyle and reflect your personal style. Designing and customizing homes is our way of turning your dreams into reality, providing satisfaction and joy. Our dedication stems from a commitment to delivering exceptional, personalized results that make every project unique.
-              </p>
+              </span>
             </div>
           </div>
         </div>

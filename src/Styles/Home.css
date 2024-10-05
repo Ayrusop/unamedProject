@@ -53,7 +53,10 @@ img {
 }
 .cen-txt{
   font-weight:500;
-color: #1F2042;
+  color: #1F2042;
+  font-style:italic ;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   
 }
 .explore-txt-area{
