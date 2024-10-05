@@ -10,7 +10,7 @@ const CountCircle = ({ targetNumber, label, delay, animate }) => {
     const end = targetNumber;
     if (start === end) return;
 
-    let incrementTime = Math.abs(Math.floor(2000 / end));
+    let incrementTime = Math.abs(Math.floor(2500 / end));
     const timer = setTimeout(() => {
       const interval = setInterval(() => {
         start += 1;

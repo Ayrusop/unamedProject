@@ -9,6 +9,7 @@ import Footer from './Components/Footer';
 import About from './Components/About';
 import Service from './Components/Service';
 import ScrollToTop from './Components/ScroolToTop';
+import PortfolioSection from './Components/PortfolioSection'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/aboutus' element={<About />} />
             <Route path='/service' element={<Service />} />
+            <Route path='/getquote' element={<PortfolioSection />} />
           </Routes>
           <Footer />
         </HelmetProvider>

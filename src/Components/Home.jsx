@@ -64,7 +64,7 @@ const Home = () => {
                         <div class="px-3 px-md-5 main-text-area">
                             <h2>Explore & Learn more About Us</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur. Interdum id elementum arcu nunc nibh. Ut turpis sed consectetur aliquet ornare condimentum. Nisl euismod elit risus purus. Donec nibh amet bibendum bibendum aliquam sed. Feugiat risus vitae volutpat elementum velit massa nam lobortis in. Urna aenean tortor sed morbi non tristique volutpat est sit. Ultricies enim morbi malesuada magna blandit. Dolor aliquam enim cursus imperdiet Non lectus sollicitudin egestas diam justo. Amet volutpat scelerisque enim proin eu fringilla quam ullamcorper. Tempus a faucibus vel odio augue tristique malesuada.
+                            SVARG Enterprise is a dynamic design firm specializing in both interior and exterior solutions for residential and commercial spaces. With over two years of experience, the company is dedicated to delivering high-quality, innovative designs that enhance the aesthetic and functional aspects of every project. Our team combines creativity with precision to create spaces that are not only visually stunning but also practical and tailored to our clients’ needs. At SVARG Enterprise, we are committed to turning your vision into a beautifully designed reality, ensuring every detail reflects your unique style and requirements.
                             </p>
                             <Link className='link-tag' to='./contact'>
                                 <button className='glb-btn'>

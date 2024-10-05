@@ -1,0 +1,429 @@
+.portfolio-section {
+    background-color: #1F2042;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 20%; */
+  }
+  
+  .portfolio-container {
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    position: relative;
+    padding: 0px;
+    flex-wrap: wrap;
+  }
+  
+  /* Image and text side by side for larger screens */
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: slideInFromTop 2s ease-out;
+  }
+  
+  .portfolio-image {
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    top: -70px;
+  }
+  
+  .text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    animation: slideInFromRight 1.5s ease-out;
+  }
+  
+  .text-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .text-container p {
+    font-size: 1.2rem;
+  }
+  
+  .gladText {
+    margin-top: 20%;
+    
+  }
+  .gladText p{
+   font-size: 1.5rem;
+    
+  }
+  .secondSec{
+    background-color: #1F2042;
+  }
+  @media (max-width: 768px) {
+    .secondSec{
+       margin-top:25%;
+      }
+}
+  .textInSection{
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* top: 80px; */
+    color: #fff;
+    /* font-family:Georgia, 'Times New Roman', Times, serif; */
+    font-size: 24px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  
+  /* Responsive adjustments for mobile */
+  @media (max-width: 768px) {
+    .portfolio-container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+    }
+  
+    .image-container {
+      flex: none; /* Adjust flex behavior */
+      width: 100%;
+      margin-bottom: 20px; /* Add space between image and text */
+    }
+  
+    .portfolio-image {
+      width: 100%; /* Make the image full-width */
+      max-width: none; /* Remove max-width */
+      top: 0; /* Reset the top position */
+    }
+  
+    .text-container {
+      flex: none;
+      text-align: center; /* Center the text */
+      padding: 10px;
+    }
+  
+    .text-container h2 {
+      font-size: 2rem;
+    }
+  
+    .text-container p {
+      font-size: 1rem;
+    }
+  
+    .gladText {
+      margin-top: 10%; /* Reduce the margin for smaller screens */
+    }
+  }
+  
+  /* Animations */
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .portfolio-container {
+    position: relative;
+    animation: riseFromBottom 1.5s ease-out;
+  }
+  
+  @keyframes riseFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+ 
+.IamText p{
+    font-size: 24px;
+}  
+.IamText h2{
+    font-size: 48px;
+}
+.imageSec h2{
+    font-size: 48px;
+}
+.image-container1 {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.image-container1 img {
+    width: 100%;
+    height: auto;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f204281;
+    color: rgb(255, 255, 255);
+    /* text-align: center; */
+    padding: 50px;
+    opacity: 0.8;
+}
+
+.image-overlay h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.image-overlay h3::after {
+    content: "";
+    display: block;
+    width: 45%; /* 20% of the text width */
+    height: 2px; /* Height of the underline */
+    background-color: white; /* Color of the underline */
+    margin: 5px auto 0; /* Spacing between text and underline */
+    position: absolute;
+    left: 0%; /* Center the underline */
+    bottom: -10px; /* Adjust position under the text */
+}
+
+.image-overlay span {
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+.latestProjects h2{ 
+    font-size: 500%;
+    color: #D9D9D9;
+}
+@media (max-width: 786px) {
+    .latestProjects h2{ 
+        font-size: 300%;
+      margin-bottom: 20%;
+    }
+}
+.testimnial-area {
+    background-color: #1F2042;
+    padding: 5% 0; /* Remove fixed height and use padding */
+}
+@media (min-width: 992px) {
+    .testimnial-area {
+      height: 50vh;
+      margin-bottom: 20%;
+    }
+}
+.tetimonial h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 5%;
+    margin-bottom: 20px; /* Add a bottom margin instead of using a percentage margin */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.295);
+}
+
+.card h2 {
+    color: #000;
+}
+
+.card p {
+    color: #000;
+    font-size: 50px;
+}
+
+.card span {
+    font-size: 20px;
+}
+
+.card img {
+    height: 100px;
+    width: 100px;
+    margin-top: 5%;
+}
+
+.card h3 {
+    color: #00000070;
+}
+
+.formPart h2{
+font-size: 500%;
+    color: #D9D9D9;
+}
+@media (max-width: 786px) {
+    .formPart h2{ 
+        font-size: 300%;
+        margin-bottom: 20%;
+    }
+}
+.container form .form-row{
+  display: flex;
+  /* margin: 32px 0; */
+  /* margin-left: 10%; */
+}
+form .form-row .input-data{
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+form .form-row .textarea{
+  height: 70px;
+}
+.input-data input,
+.textarea textarea{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0,0,0, 0.12);
+}
+.input-data input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #1F2042;
+  
+}
+.input-data input:focus {
+  outline: none !important;
+  border-color: transparent !important; /* Optional: change this to your preferred border color */
+  box-shadow: none !important;
+}
+
+.textarea textarea{
+  resize: none;
+  padding-top: 10px;
+}
+.input-data label{
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.textarea label{
+  width: 100%;
+  bottom: 40px;
+  background: #fff;
+}
+.input-data .underline{
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+.input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #1F2042;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before{
+  transform: scale(1);
+}
+.submit-btn .input-data{
+  overflow: hidden;
+  height: 45px!important;
+  width: 25%!important;
+}
+.submit-btn .input-data .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  transition: all 0.4s;
+}
+.submit-btn .input-data:hover .inner{
+  left: 0;
+}
+.submit-btn .input-data input{
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 700px) {
+  .container .text{
+    font-size: 30px;
+  }
+  .container form{
+    padding: 10px 0 0 0;
+  }
+  .container form .form-row{
+    display: block;
+  }
+  form .form-row .input-data{
+    margin: 35px 0!important;
+  }
+  .submit-btn .input-data{
+    width: 40%!important;
+  }
+}
+
+.btn-submit1{
+  background: linear-gradient(to bottom right, #1f2042, #4f51a8);
+  /* border-radius: 12px; */
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+ 
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  color: #ffff;
+  margin: 0 0px;
+  width: 90%;
+}
+.form-section{
+  padding: 2%;
+}
+
+.formPart-left{
+  background:linear-gradient(to bottom right, #1f2042, #4f51a8);
+  color: #fff;
+  padding: 5%;
+}
+.formPart-left h3{
+  font-size: 40px;
+}

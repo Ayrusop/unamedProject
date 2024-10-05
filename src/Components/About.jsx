@@ -24,7 +24,7 @@ const About = () => {
                     </div>
                     <div className="banner-buttons">
                         <button className="banner-button">Our Portfolio</button>
-                        <button className="banner-button1">About us</button>
+                        
                     </div>
                 </div>
 

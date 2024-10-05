@@ -19,14 +19,17 @@
     width:100%;
     align-items: center;
     justify-content: center;
-    font-family:Georgia, 'Times New Roman', Times, serif
+    /* font-family:Georgia, 'Times New Roman', Times, serif */
+    font-style: italic;
 }
 .abt-center-text1 p{
     font-size: 18px;
     width:100%;
     align-items: center;
     justify-content: center;
-    font-family:Georgia, 'Times New Roman', Times, serif
+    /* font-family:Georgia, 'Times New Roman', Times, serif */
+    font-style: italic;
+
 }
 
 .vission-mission{
