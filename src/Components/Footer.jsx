@@ -2,7 +2,8 @@ import React from 'react';
 import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa'; // Importing icons
 import '../Styles/Footer.css';
 import OverlappingSections from './OverlappingSections';
-
+import logo from '../assets/logo.png'; 
+import { FaWhatsapp } from 'react-icons/fa6';
 const Footer = () => {
     return (
         <>
@@ -14,38 +15,29 @@ const Footer = () => {
                             <div className="col-md-3 col-sm-6">
                                 {/* Column1 */}
                                 <div className="footer-pad">
-                                    <h4>Heading 1</h4>
-                                    <ul className="list-unstyled">
-                                        <li><a href="#">Payment Center</a></li>
-                                        <li><a href="#">Contact Directory</a></li>
-                                        <li><a href="#">Forms</a></li>
-                                        <li><a href="#">News and Updates</a></li>
-                                        <li><a href="#">FAQs</a></li>
-                                    </ul>
+                                <img src={logo} alt='logo' style={{width:'100%', height:'100%'}}/>
                                 </div>
                             </div>
                             <div className="col-md-3 col-sm-6">
                                 {/* Column2 */}
                                 <div className="footer-pad">
-                                    <h4>Heading 2</h4>
+                                    <h4>Navigation</h4>
                                     <ul className="list-unstyled">
-                                        <li><a href="#">Website Tutorial</a></li>
-                                        <li><a href="#">Accessibility</a></li>
-                                        <li><a href="#">Disclaimer</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">FAQs</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Team</a></li>
+                                        <li><a href="#">News & Events</a></li>
+                                        <li><a href="#">Projects</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-md-3 col-sm-6">
                                 {/* Column3 */}
                                 <div className="footer-pad">
-                                    <h4>Heading 3</h4>
+                                    <h4>Projects</h4>
                                     <ul className="list-unstyled">
-                                        <li><a href="#">Parks and Recreation</a></li>
-                                        <li><a href="#">Public Works</a></li>
-                                        <li><a href="#">Police Department</a></li>
-                                        <li><a href="#">Fire</a></li>
+                                        <li><a href="#">Running Projects</a></li>
+                                        <li><a href="#">Completed Projects</a></li>
+                                        <li><a href="#">Coming Soon</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -55,6 +47,7 @@ const Footer = () => {
                                     <li><a href="#" className="icoFacebook" title="Facebook"><FaFacebook /></a></li>
                                     <li><a href="#" className="icoLinkedin" title="Linkedin"><FaLinkedin /></a></li>
                                     <li><a href="#" className="icoInstagram" title="Instagram"><FaInstagram /></a></li>
+                                    <li><a href="#" className="icoWhatsapp" title="Instagram"><FaWhatsapp /></a></li>
                                 </ul>
                             </div>
                         </div>

@@ -8,13 +8,14 @@ import ContactPage from './Components/Contact';
 import Footer from './Components/Footer';
 import About from './Components/About';
 import Service from './Components/Service';
-import ScrollToTop from './Components/ScroolToTop';
+import ScroolToTop from './Components/ScroolToTop';
 import PortfolioSection from './Components/PortfolioSection'
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
   return (
     <Router>
-      <ScrollToTop />
+      <ScroolToTop />
       <div className="App">
         <HelmetProvider>
           <Header />
@@ -26,6 +27,7 @@ function App() {
             <Route path='/getquote' element={<PortfolioSection />} />
           </Routes>
           <Footer />
+          <ScrollToTop/>
         </HelmetProvider>
       </div>
     </Router>
