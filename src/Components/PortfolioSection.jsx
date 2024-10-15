@@ -33,7 +33,7 @@ const PortfolioSection = () => {
     };
     return (
         <Fragment>
-            <section style={{ backgroundColor: '#1F2042' }}>
+            <section style={{ backgroundColor: '#1F2042' }} className='mt-5'>
                 <div className="portfolio-section">
                     <div className='container portfolio-container'>
                         <div className="image-container ">
