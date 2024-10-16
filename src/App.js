@@ -11,6 +11,7 @@ import Service from './Components/Service';
 import ScroolToTop from './Components/ScroolToTop';
 import PortfolioSection from './Components/PortfolioSection'
 import ScrollToTop from './Components/ScrollToTop';
+import Gallery from './Components/Gallery';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path='/aboutus' element={<About />} />
             <Route path='/service' element={<Service />} />
             <Route path='/getquote' element={<PortfolioSection />} />
+            <Route path='/gallery' element={<Gallery />} />
           </Routes>
           <Footer />
           <ScrollToTop/>
