@@ -9,6 +9,8 @@ import acpCladding from '../assets/service/acp-cladding.png'
 import hplCladding from '../assets/service/hpl-cladding.png'
 import louvers from '../assets/service/louvers.png'
 import glazing from '../assets/service/glazing.png'
+import bathroomgalss from '../assets/service/BATHROOM GLASS PATITION.png'
+import officeRoom from '../assets/service/OFFICE GLASS PARTITION.png'
 export const categories = [
   { id: 1, name: 'CONSTRUCTION' },
   { id: 2, name: 'INTERIORS' },
@@ -55,7 +57,7 @@ export const products = [
   },
   {
       id: 14,
-      category: 4,
+      category: 2,
       name: 'LOUVERS',
       description: 'Louvers cladding is an innovative architectural feature that allows for natural ventilation and light control while enhancing privacy. Designed to reduce solar heat gain, louvers can improve energy efficiency and comfort in a building. Available in various materials and finishes, they add a modern aesthetic to facades while offering functional benefits.',
       images: [louvers],
@@ -91,8 +93,15 @@ export const products = [
   {
       id: 19,
       category: 3,
-      name: 'CUBICAL',
-      description: 'Cubical glass design features geometric shapes that create a striking visual impact in architectural and interior spaces. This design allows for unique light play and reflections, enhancing aesthetics. Its versatility makes it suitable for various applications, from modern facades to innovative furniture pieces, offering both elegance and functionality.',
-      images: [cubical],
+      name: 'OFFICE GLASS PARTITION',
+      description: 'Office glass partitions enhance modern workspaces by promoting an open, airy feel while maintaining privacy. They allow natural light to flow, boosting employee mood and productivity. With sleek designs, they blend functionality with aesthetics, creating a professional environment. Additionally, they can be easily reconfigured, adapting to evolving office needs.',
+      images: [officeRoom],
+  },
+  {
+      id: 20,
+      category: 3,
+      name: 'BATHROOM GLASS PATITION',
+      description: 'Bathroom glass partitions are sleek, modern barriers that create privacy while enhancing the aesthetic of a space. Typically made from tempered glass, they are durable and water-resistant, making them ideal for wet environments. These partitions can be framed or frameless, allowing for various design options. They help to maximize light and make the bathroom feel more open and spacious.',
+      images: [bathroomgalss],
   },
 ];

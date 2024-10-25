@@ -65,7 +65,7 @@ const Innovation = () => {
         </div>
         <div className="col-md-4">
         <div className="border p-4 text-center d-flex justify-content-center align-items-center">
-           <Link to='/service' style={{textDecoration:'none'}}> <p className='circle text-center'>View All Services ↗</p></Link>
+           <Link to='/service' style={{textDecoration:'none'}}> <p className='circle1 text-center'>View All Services ↗</p></Link>
           </div>
         </div>
       </div>
