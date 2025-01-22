@@ -9,6 +9,12 @@ color: #1F2042;
 font-size: 55px;
 
 }
+.main-text-area p{
+/* font-weight: bolder; */
+color: #8c8c8c;
+/* font-size: 55px; */
+
+}
 /* Style for the left section */
 
 
@@ -92,7 +98,12 @@ img {
   display: block;  
   transition: transform 0.3s ease; 
 }
-
-.center-image:hover {
+.want-hover{
+  transition: transform 0.3s ease; 
+}
+.want-hover:hover {
     transform: scale(1.05); 
+}
+.p{
+  color: #8c8c8c;
 }

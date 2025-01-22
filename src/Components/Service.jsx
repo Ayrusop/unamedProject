@@ -16,7 +16,7 @@ import MetaData from '../MetaData'
 const Service = () => {
     return (
         <Fragment>
-            <MetaData title={'Service | SVARG'} />
+            <MetaData title={'Service | SVARG | Smart way to Build and Design your dream Home'} />
             <div className="banner-container1">
                 <div className='container contents text-left'>
                     <div className='content-list'>
@@ -36,13 +36,13 @@ const Service = () => {
                             <div className="banner-line" />
                         </div>
                         <div className="col abt-svrag">
-                            <p>SVARG Enterprise specializes in transforming spaces through innovative exterior and interior design solutions. Our team of skilled professionals is dedicated to creating harmonious environments that reflect our clients’ unique styles and functional needs. From residential homes to commercial properties, we offer tailored design services that enhance aesthetics while ensuring practicality and comfort. We pride ourselves on our collaborative approach, working closely with clients to understand their vision and bring it to life.</p>
-                            <p>
+                            <p style={{color:'#8c8c8c'}}>SVARG Enterprise specializes in transforming spaces through innovative exterior and interior design solutions. Our team of skilled professionals is dedicated to creating harmonious environments that reflect our clients’ unique styles and functional needs. From residential homes to commercial properties, we offer tailored design services that enhance aesthetics while ensuring practicality and comfort. We pride ourselves on our collaborative approach, working closely with clients to understand their vision and bring it to life.</p>
+                            <p style={{color:'#8c8c8c'}}>
                                 At SVARG Enterprise, project management is a cornerstone of our service delivery. We oversee every aspect of the design process, from initial concept development to final installation, ensuring timelines and budgets are met.
                             </p>
-                            <button className='glb-btn mt-5'>
+                            {/* <button className='glb-btn mt-5'>
                                 Read More
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </div>
@@ -57,6 +57,7 @@ const Service = () => {
                 </center>
             </div>
 
+            
             <div class="container img-fluid">
                 <div class="row">
                     <div class="col-sm d-flex  ">
@@ -65,7 +66,7 @@ const Service = () => {
                         </div>
                         <div className='m-2'>
                             <h4>DESIGN & PLANNING</h4>
-                            <p>Design and planning involve creating detailed layouts and concepts to optimize space functionality and aesthetics for any environment.</p>
+                            <p style={{color:'#8c8c8c'}}>Design and planning involve creating detailed layouts and concepts to optimize space functionality and aesthetics for any environment.</p>
                         </div>
                     </div>
                     <div class="col-sm d-flex">
@@ -74,7 +75,7 @@ const Service = () => {
                         </div>
                         <div className='m-2'>
                             <h4>BUILDING RENOVATION</h4>
-                            <p>Encompasses the process of upgrading, restoring, or repurposing existing structures to improve their functionality, aesthetics, and overall value.</p>
+                            <p style={{color:'#8c8c8c'}}>Encompasses the process of upgrading, restoring, or repurposing existing structures to improve their functionality, aesthetics, and overall value.</p>
                         </div>
                     </div>
                     <div class="col-sm d-flex">
@@ -83,7 +84,7 @@ const Service = () => {
                         </div>
                         <div className='m-2'>
                             <h4>INTERIOR DESIGN</h4>
-                            <p>Enhancing the interior of a space to achieve a healthier and more aesthetically pleasing environment, focusing on layout, color.</p>
+                            <p style={{color:'#8c8c8c'}}>Enhancing the interior of a space to achieve a healthier and more aesthetically pleasing environment, focusing on layout, color.</p>
                         </div>
                     </div>
                 </div>
@@ -94,7 +95,7 @@ const Service = () => {
                         </div>
                         <div className='m-2'>
                             <h4>CONSTRUCTION SERVICES</h4>
-                            <p>Construction services involve the planning, execution, and management of building projects, including residential, commercial, and industrial structures.</p>
+                            <p style={{color:'#8c8c8c'}}>Construction services involve the planning, execution, and management of building projects, including residential, commercial, and industrial structures.</p>
                         </div>
                     </div>
                     <div class="col-sm d-flex">
@@ -103,7 +104,7 @@ const Service = () => {
                         </div>
                         <div className='m-2'>
                             <h4>DOCUMENTATION</h4>
-                            <p>Documentation to the process of creating and organizing detailed records, plans, and specifications for projects, ensuring clear communication.</p>
+                            <p style={{color:'#8c8c8c'}}>Documentation to the process of creating and organizing detailed records, plans, and specifications for projects, ensuring clear communication.</p>
                         </div>
                     </div>
                     <div class="col-sm d-flex">
@@ -112,17 +113,24 @@ const Service = () => {
                         </div>
                         <div className='m-2'>
                             <h4>PROFESSIONAL SUPPORT</h4>
-                            <p>Expert guidance and assistance in various areas, such as design, project management, and regulatory compliance, to ensure successful execution..</p>
+                            <p style={{color:'#8c8c8c'}}>Expert guidance and assistance in various areas, such as design, project management, and regulatory compliance, to ensure successful execution..</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='text-center m-5 we-offer'>
+                <h3>STEP BY STEP</h3>
+                <h2><b>HOW IT'S WORK</b></h2>
+                <center>
+                    <div className="banner-line text-center" />
+                </center>
             </div>
             <div class="row p-5 mt-5">
                 <div class="col">
                     <img src={plan} alt="plan" />
                     <div className='p-3'>
                         <h3 className=''>PLANNING</h3>
-                        <p className=''>Developing a strategic approach to project goals, timelines, and resource allocation to ensure a successful design and construction process.</p>
+                        <p className='' style={{color:'#8c8c8c'}}>Developing a strategic approach to project goals, timelines, and resource allocation to ensure a successful design and construction process.</p>
                     </div>
 
                 </div>
@@ -130,21 +138,21 @@ const Service = () => {
                     <img src={design} alt="design" />
                     <div className='p-3'>
                         <h3 className=''>DESIGNING</h3>
-                        <p className=''>Translating concepts into visual representations, focusing on aesthetics, functionality, and user experience to create cohesive spaces.</p>
+                        <p className='' style={{color:'#8c8c8c'}}>Translating concepts into visual representations, focusing on aesthetics, functionality, and user experience to create cohesive spaces.</p>
                     </div>
                 </div>
                 <div class="col">
                     <img src={buillding} alt="plan" />
                     <div className='p-3'>
                         <h3 className=''>BUILDING</h3>
-                        <p className=''>Executing the construction process, where designs are realized through the assembly of materials and coordination of labor to create physical structures.</p>
+                        <p className='' style={{color:'#8c8c8c'}}>Executing the construction process, where designs are realized through the assembly of materials and coordination of labor to create physical structures.</p>
                     </div>
                 </div>
                 <div class="col">
                     <img src={finish} alt="plan" />
                     <div className='p-3'>
                         <h3 className=''>FINISH</h3>
-                        <p className=''>Adding final touches and details that enhance a space, including paint, fixtures, and furnishings, to ensure the completed project meets both aesthetic and functional standards.</p>
+                        <p className='' style={{color:'#8c8c8c'}}>Adding final touches and details that enhance a space, including paint, fixtures, and furnishings, to ensure the completed project meets both aesthetic and functional standards.</p>
                     </div>
                 </div>
             </div>
@@ -161,19 +169,19 @@ const Service = () => {
                 <div class="row ">
                     <div class="col-sm">
                         <div className="testimonial-container mb-5">
-                            <p className="testimonial-text">“From concept to completion, SVARG Enterprise exceeded our expectations. Their expertise in both interior and exterior design is unmatched, and they truly listen to their clients' needs.”</p>
+                            <p className="testimonial-text" style={{color:'#8c8c8c'}}>“From concept to completion, SVARG Enterprise exceeded our expectations. Their expertise in both interior and exterior design is unmatched, and they truly listen to their clients' needs.”</p>
                             <img className="testimonial-image" src={image} alt="Testimonial" />
                         </div>
                     </div>
                     <div class="col-sm">
                         <div className="testimonial-container mb-5">
-                            <p className="testimonial-text">“Working with SVARG Enterprise was a fantastic experience. Their team is professional, attentive, and incredibly skilled. They turned our outdated office into a modern, functional workspace that we are proud of.”</p>
+                            <p className="testimonial-text" style={{color:'#8c8c8c'}}>“Working with SVARG Enterprise was a fantastic experience. Their team is professional, attentive, and incredibly skilled. They turned our outdated office into a modern, functional workspace that we are proud of.”</p>
                             <img className="testimonial-image" src={image} alt="Testimonial" />
                         </div>
                     </div>
                     <div class="col-sm">
                         <div className="testimonial-container mb-5">
-                            <p className="testimonial-text">“SVARG Enterprise transformed our home beyond our expectations. Their attention to detail and creative vision truly brought our ideas to life. We couldn’t be happier with the results!”</p>
+                            <p className="testimonial-text" style={{color:'#8c8c8c'}}>“SVARG Enterprise transformed our home beyond our expectations. Their attention to detail and creative vision truly brought our ideas to life. We couldn’t be happier with the results!”</p>
                             <img className="testimonial-image" src={image} alt="Testimonial" />
                         </div>
                     </div>

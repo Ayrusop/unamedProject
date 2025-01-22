@@ -17,7 +17,7 @@
   }
   
   /* Image and text side by side for larger screens */
-  .image-container {
+  .image-container0 {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -51,12 +51,10 @@
   }
   
   .gladText {
-    margin-top: 20%;
-    
+    margin-top: 20%;   
   }
   .gladText p{
    font-size: 1.5rem;
-    
   }
   .secondSec{
     background-color: #1F2042;
@@ -269,7 +267,7 @@ font-size: 500%;
 @media (max-width: 786px) {
     .formPart h2{ 
         font-size: 300%;
-        margin-bottom: 20%;
+        margin-top: 10%;
     }
 }
 .container form .form-row{
@@ -426,4 +424,9 @@ form .form-row .textarea{
 }
 .formPart-left h3{
   font-size: 40px;
+}
+@media (max-width: 786px) {
+  .text-section {
+    margin-top: -100px; 
+  }
 }

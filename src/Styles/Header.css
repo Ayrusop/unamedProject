@@ -39,6 +39,9 @@ h3 {
   font-size: 20px;
   font-weight: bold;
 }
+.nav .nav-link:hover{
+  color: #D9D9D9;
+}
 .nav-close,
 .menu-icon {
   display: none;

@@ -1,14 +1,18 @@
 import React, { Fragment, useState } from 'react';
 import '../Styles/PortfolioSection.css';
-import img from '../assets/Rectangle 106 (1).png'
+import img from '../assets/Rectangle 106 (1).jpg'
 import construction from '../assets/portfolio/construction.png'
 import cladding from '../assets/portfolio/cladding.png'
 import exterior from '../assets/portfolio/exterior.png'
 import glading from '../assets/portfolio/glading.png'
 import glassInstalion from '../assets/portfolio/glass instalion.png'
 import interior from '../assets/portfolio/interior.png'
-import lasterProjects from '../assets/portfolio/Rectangle 108.png'
-import jhonDurai from '../assets/portfolio/jhon Durai.png'
+import lasterProjects from '../assets/portfolio/lasterProjects.jpeg'
+import lasterProjects2 from '../assets/portfolio/lasterProjects2.jpeg'
+// import jhonDurai from '../assets/portfolio/jhon Durai.png'
+import MetaData from '../MetaData';
+import image from '../assets/service/icon-5359553_640.webp'
+import emailjs from 'emailjs-com'; // Import EmailJS
 const PortfolioSection = () => {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -17,7 +21,7 @@ const PortfolioSection = () => {
         website: '',
         message: '',
     });
-
+const [phone, setPhone] = useState()
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
@@ -28,15 +32,51 @@ const PortfolioSection = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission, e.g., send data to an API
-        console.log('Form submitted:', formData);
+       
+            const emailData = {
+                firstName: formData.firstName,
+                // lastName: formData.lastName,
+                email: formData.email,
+                // phone: phone,
+                message: formData.message,
+            };
+
+        emailjs
+        .send(
+            'service_062p7zk', // Replace with your service ID
+            'template_ss8on92', // Replace with your template ID
+            emailData,
+            'lo7NpcAZRXrxyPDyE' // Replace with your user ID
+        )
+        .then(
+            (result) => {
+                console.log(result.text);
+                alert('Message sent successfully!');
+                setFormData({
+                    firstName: '',
+                    // lastName: '',
+                    email: '',
+                    message: '',
+                    // phone: '',
+                    // termsAccepted: false,
+                });
+                setPhone('');
+            },
+            (error) => {
+                console.log(error.text);
+                alert('Failed to send message. Try again.');
+            }
+        );
+    
+        // console.log('Form submitted:', formData);
     };
     return (
         <Fragment>
+            <MetaData title={"My Profile | SVARG | Smart way to Build and Design your dream Home"} />
             <section style={{ backgroundColor: '#1F2042' }} className='mt-5'>
                 <div className="portfolio-section">
                     <div className='container portfolio-container'>
-                        <div className="image-container ">
+                        <div className="image-container0 mt-5">
                             <img src={img} alt="Portfolio" className="portfolio-image" />
                         </div>
                         <div className="text-container ">
@@ -56,7 +96,7 @@ const PortfolioSection = () => {
             </section>
             <section className='secondSec'>
                 <div className='textInSection'>
-                    <p className='text-center sectionText' style={{ color: 'white' }}>
+                    <p className='text-center sectionText text-section' style={{ color: 'white' }}>
                         "True builders don’t just create structures; they shape dreams into reality for others."
                     </p>
                 </div>
@@ -65,7 +105,7 @@ const PortfolioSection = () => {
                 <div className='IamText'>
                     <b><p>A BIT ABOUT ME</p> </b>
                     <h2>WHO AM I ?</h2>
-                    <p>Hi, I’m Gokul Selvaraj, the CEO of SVARG Enterprise, where I transform <br />dreams into reality. With five years of experience in the industry, I specialize <br />in construction, interior, and exterior design, successfully leading multiple <br />projects and driving innovation and excellence in all that I do.</p>
+                    <p style={{ color: '#8c8c8c' }}>Hi, I’m Gokul Selvaraj, the CEO of SVARG Enterprise, where I transform <br />dreams into reality. With five years of experience in the industry, I specialize <br />in construction, interior, and exterior design, successfully leading multiple <br />projects and driving innovation and excellence in all that I do.</p>
                 </div>
                 <div className='imageSec mt-5'>
                     <h2>MY WORKS</h2>
@@ -134,10 +174,10 @@ const PortfolioSection = () => {
                     <h2>LATEST PROJECTS</h2>
                     <div className="row mt-5">
                         <div className="col ">
-                            <img src={lasterProjects} alt='glassInstalion' className='img-fluid' />
+                            <img src={lasterProjects} alt='glassInstalion' className='img-fluid' style={{margin:"1%"}}/>
                         </div>
                         <div className="col">
-                            <img src={lasterProjects} alt='glassInstalion' className='img-fluid' />
+                            <img src={lasterProjects2} alt='glassInstalion' className='img-fluid' style={{height:"76%", width:"100%", margin:"1%"}}/>
                         </div>
                     </div>
                 </div>
@@ -152,27 +192,27 @@ const PortfolioSection = () => {
                             <div className='card'>
                                 <p>“</p>
                                 <span>Exceptional attention to detail; <br />our project exceeded expectations</span>
-                                <img src={jhonDurai} alt='' />
-                                <h3 className='mt-3'><b>JHON DURAI</b></h3>
-                                <span>Business Owner</span>
+                                <img src={image} alt='' />
+                                <h3 className='mt-3'><b>Dhanush</b></h3>
+                                {/* <span>Business Owner</span> */}
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6 col-12">
                             <div className='card'>
                                 <p>“</p>
                                 <span>Professional, innovative, and a true pleasure to work with!</span>
-                                <img src={jhonDurai} alt='' />
-                                <h3 className='mt-3'><b>KEVIN</b></h3>
-                                <span>Chief Accountant</span>
+                                <img src={image} alt='' />
+                                <h3 className='mt-3'><b>Rahul</b></h3>
+                                {/* <span>Chief Accountant</span> */}
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6 col-12">
                             <div className='card'>
                                 <p>“</p>
                                 <span>SVARG Enterprise delivered on time and with remarkable quality.</span>
-                                <img src={jhonDurai} alt='' />
-                                <h3 className='mt-3'><b>SANCHO</b></h3>
-                                <span>Sales Manager</span>
+                                <img src={image} alt='' />
+                                <h3 className='mt-3'><b>Vignesh</b></h3>
+                                {/* <span>Sales Manager</span> */}
                             </div>
                         </div>
                     </div>
@@ -183,14 +223,21 @@ const PortfolioSection = () => {
                 <h2>CONTACT </h2>
                 <div className="row mt-5 form-content">
                     <div className="col formPart-left">
-                        <h3 className='mt-2'>Do you have any project?
+                        <h3 className='mt-'>Do you have any project?
                             <br /> Let’s Talk! </h3>
-                        <p className='mt-4'>Visit our website to know More about us:</p>
-                        <p style={{ fontSize: '20px' }}><b>www.svragenterprise.com</b></p>
-                        <p className='mt-4'>Mobile:</p>
+                        <p className='mt-2'>Visit our website to know More about us:</p>
+                        <p style={{ fontSize: '20px' }}><b>www.svargenterprise.com</b></p>
+                        <p className='mt-2'>Mobile:</p>
                         <p style={{ fontSize: '20px' }}><b>+91 98434 35875</b></p>
-                        <p className='mt-4'>E-mail:</p>
-                        <p style={{ fontSize: '20px' }}><b>gokulselvaraj@gmail.com</b></p>
+                        <p className='mt-2'>E-mail:</p>
+                        <p style={{ fontSize: '20px' }}><b>enterprisesvarg@gmail.com</b></p>
+                        <p className='mt-2'>Address:</p>
+                        <p style={{ fontSize: '20px' }}><b>Flat 2,
+                            SA Avenue,,
+                            Muthu Nagar,
+                            Eswar park,
+                            Thudiyalur,
+                            Coimbatore - 641034.</b></p>
                     </div>
                     <div className="col form-section">
                         <form onSubmit={handleSubmit} >

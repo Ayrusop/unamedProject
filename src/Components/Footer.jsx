@@ -2,20 +2,20 @@ import React from 'react';
 import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa'; // Importing icons
 import '../Styles/Footer.css';
 import OverlappingSections from './OverlappingSections';
-import logo from '../assets/logo.png'; 
+import logo from '../assets/logo.png';
 import { FaWhatsapp } from 'react-icons/fa6';
 const Footer = () => {
     return (
         <>
             <footer className="mainfooter" role="contentinfo">
-         <OverlappingSections/>
+                <OverlappingSections />
                 <div className="footer-middle">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-3 col-sm-6">
                                 {/* Column1 */}
                                 <div className="footer-pad">
-                                <img src={logo} alt='logo' style={{width:'100%', height:'100%'}}/>
+                                    <img src={logo} alt='logo' className='logo-on-footer' />
                                 </div>
                             </div>
                             <div className="col-md-3 col-sm-6">
@@ -44,9 +44,9 @@ const Footer = () => {
                             <div className="col-md-3">
                                 <h4>Follow Us</h4>
                                 <ul className="social-network social-circle">
-                                    <li><a href="#" className="icoFacebook" title="Facebook"><FaFacebook /></a></li>
+                                    {/* <li><a href="#" className="icoFacebook" title="Facebook"><FaFacebook /></a></li> */}
                                     <li><a href="#" className="icoLinkedin" title="Linkedin"><FaLinkedin /></a></li>
-                                    <li><a href="#" className="icoInstagram" title="Instagram"><FaInstagram /></a></li>
+                                    <li><a href="https://www.instagram.com/svarg_enterprise/profilecard/?igsh=cjViMDUycWQ0dGth" className="icoInstagram" title="Instagram"><FaInstagram /></a></li>
                                     <li><a href="#" className="icoWhatsapp" title="Instagram"><FaWhatsapp /></a></li>
                                 </ul>
                             </div>

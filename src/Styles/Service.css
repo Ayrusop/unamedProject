@@ -9,6 +9,14 @@
     color: white;
     padding: 0 20px; /* Added padding to ensure responsiveness on smaller screens */
 }
+@media (max-width: 768px) {
+    .banner-container {
+        background-position: right center; /* Adjust the position to the right for mobile */
+    }
+    .banner-container1 {
+        background-position: center; /* Adjust the position to the right for mobile */
+    }
+}
 .banner-container1 {
     background-image: url('../assets/service/Service-banner.png');
     background-size: cover;

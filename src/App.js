@@ -25,7 +25,7 @@ function App() {
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/aboutus' element={<About />} />
             <Route path='/service' element={<Service />} />
-            <Route path='/getquote' element={<PortfolioSection />} />
+            <Route path='/profile' element={<PortfolioSection />} />
             <Route path='/gallery' element={<Gallery />} />
           </Routes>
           <Footer />

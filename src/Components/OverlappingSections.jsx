@@ -29,7 +29,7 @@ const OverlappingSections = () => {
               <button>Contact Us</button>
             </div>
             <div>
-              <h4 className='text-white'>Homes and Needs</h4>
+              <h4 className='text-white overlap-contact'>Homes and Needs</h4>
               <p className="info-text mt-2">We’ll listen to your needs, identify the best approach and then
                 create a bespoke smart changing solution that’s right for you. </p>
             </div>

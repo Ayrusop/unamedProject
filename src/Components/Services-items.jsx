@@ -41,7 +41,7 @@ function ServiceItems() {
                 className="product-image"
               />
               <h4 className='text-center mt-3'>{product.name}</h4>
-              <p>{product.description}</p>
+              <p style={{color:'#8c8c8c'}}>{product.description}</p>
             </div>
           ))}
         </div>

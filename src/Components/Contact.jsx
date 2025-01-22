@@ -7,7 +7,6 @@ import '../Styles/ContactPage.css';
 import { Link } from "react-router-dom";
 import MetaData from '../MetaData';
 
-
 const ContactPage = () => {
     const [phone, setPhone] = useState('');
     const [formData, setFormData] = useState({
@@ -16,7 +15,7 @@ const ContactPage = () => {
         email: '',
         message: '',
         phone: '',
-        termsAccepted: false
+        // termsAccepted: false
     });
     const [errors, setErrors] = useState({});
 
@@ -26,7 +25,7 @@ const ContactPage = () => {
         if (!formData.lastName) validationErrors.lastName = 'Last Name is required';
         if (!formData.email) validationErrors.email = 'Email is required';
         if (!formData.message) validationErrors.message = 'Message is required';
-        if (!formData.termsAccepted) validationErrors.termsAccepted = 'You must accept the terms';
+        // if (!formData.termsAccepted) validationErrors.termsAccepted = 'You must accept the terms';
         if (!phone && !formData.phone) validationErrors.phone = 'Phone number is required';
         return validationErrors;
     };
@@ -43,45 +42,57 @@ const ContactPage = () => {
         e.preventDefault();
         const validationErrors = validate();
         if (Object.keys(validationErrors).length === 0) {
-            emailjs.sendForm('your_service_id', 'your_template_id', e.target, 'your_user_id')
-                .then((result) => {
-                    console.log(result.text);
-                    alert('Message sent successfully!');
-                }, (error) => {
-                    console.log(error.text);
-                    alert('Failed to send message. Try again.');
-                });
+            const emailData = {
+                firstName: formData.firstName,
+                lastName: formData.lastName,
+                email: formData.email,
+                phone: phone,
+                message: formData.message,
+            };
+
+            emailjs
+                .send(
+                    'service_062p7zk', // Replace with your service ID
+                    'template_ylbfum8', // Replace with your template ID
+                    emailData,
+                    'lo7NpcAZRXrxyPDyE' // Replace with your user ID
+                )
+                .then(
+                    (result) => {
+                        console.log(result.text);
+                        alert('Message sent successfully!');
+                        setFormData({
+                            firstName: '',
+                            lastName: '',
+                            email: '',
+                            message: '',
+                            phone: '',
+                            termsAccepted: false,
+                        });
+                        setPhone('');
+                    },
+                    (error) => {
+                        console.log(error.text);
+                        alert('Failed to send message. Try again.');
+                    }
+                );
         } else {
             setErrors(validationErrors);
         }
     };
-    const handlePhoneChange = (phone) => {
-        setFormData({ ...formData, phone });
+
+    const handlePhoneChange = (value) => {
+        setPhone(value);
+        setFormData({ ...formData, phone: value });
     };
+
     const handleCheckboxChange = (e) => {
         setFormData({ ...formData, privacy: e.target.checked });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-
-
-        emailjs
-            .sendForm('service_lyfqebm', 'template_izyyodh', e.target, '7LZ7Pyk8u84wlH4qs')
-            .then(
-                () => {
-
-
-                },
-                () => {
-                    console.log('Failed to submit the form. Please try again.');
-                }
-            );
-    };
     return (
         <Fragment>
-             <MetaData title={"Contact | SVARG"} />
+            <MetaData title={"Contact | SVARG | Smart way to Build and Design your dream Home"} />
             <div className='contact-page-container'>
                 <form className="contact-form col-lg-6 contact-form-container" onSubmit={sendEmail}>
                     <div className='text-center'>
@@ -92,18 +103,17 @@ const ContactPage = () => {
                     </div>
                     <div className="form-row row mt-3">
                         <div className="form-group col-lg-6">
-
                             <input
                                 type="text"
                                 name="firstName"
                                 placeholder="First Name"
-                                value={formData.name}
+                                value={formData.firstName}
                                 onChange={handleChange}
                                 required
                             />
+                            {errors.firstName && <div className="invalid-feedback d-block">{errors.firstName}</div>}
                         </div>
                         <div className="form-group col-lg-6">
-
                             <input
                                 type="text"
                                 name="lastName"
@@ -112,11 +122,11 @@ const ContactPage = () => {
                                 onChange={handleChange}
                                 required
                             />
+                            {errors.lastName && <div className="invalid-feedback d-block">{errors.lastName}</div>}
                         </div>
                     </div>
                     <div className="form-row row">
                         <div className="form-group col-lg-12">
-
                             <input
                                 type="email"
                                 name="email"
@@ -125,14 +135,14 @@ const ContactPage = () => {
                                 onChange={handleChange}
                                 required
                             />
+                            {errors.email && <div className="invalid-feedback d-block">{errors.email}</div>}
                         </div>
-
                     </div>
                     <div className="form-row row">
                         <div className="form-group col-lg-12 phone-input-group">
                             <PhoneInput
                                 country={'in'}
-                                value={formData.phone}
+                                value={phone}
                                 onChange={handlePhoneChange}
                                 inputProps={{
                                     name: 'phone',
@@ -140,12 +150,11 @@ const ContactPage = () => {
                                     placeholder: 'Phone Number',
                                 }}
                             />
+                            {errors.phone && <div className="invalid-feedback d-block">{errors.phone}</div>}
                         </div>
                     </div>
-
                     <div className="form-row row">
                         <div className="form-group col-lg-12">
-
                             <textarea
                                 name="message"
                                 placeholder="Message"
@@ -154,27 +163,25 @@ const ContactPage = () => {
                                 required
                                 style={{ resize: "none" }}
                             ></textarea>
+                            {errors.message && <div className="invalid-feedback d-block">{errors.message}</div>}
                         </div>
                     </div>
-
                     <div className="form-row row full-width">
+                        {/* <input
+                            type="checkbox"
+                            name="termsAccepted"
+                            checked={formData.termsAccepted}
+                            onChange={handleChange}
+                        /> */}
                         <label className="form-check-label text-center" htmlFor="terms">
-                            By contacting us, you agree to our <b >Terms of Service</b> & <b >Privacy Policy</b>
+                            By contacting us, you agree to our <b>Terms of Service</b> & <b>Privacy Policy</b>
                         </label>
-                        {errors.termsAccepted && <div className="invalid-feedback d-block">{errors.termsAccepted}</div>}
-
+                        {/* {errors.termsAccepted && <div className="invalid-feedback d-block">{errors.termsAccepted}</div>} */}
                     </div>
-
                     <button type="submit" className="btn btn-submit btn-block mt-2">Submit</button>
-
-
-
-
                 </form>
             </div>
         </Fragment>
-
-
     );
 };
 
